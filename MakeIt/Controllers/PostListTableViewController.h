@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PostListTableViewController : UITableViewController
-
+@property (nonatomic, strong) NSMutableArray* posts;
 @end
