@@ -7,7 +7,10 @@
 //
 
 #import "ZSSRichTextEditor.h"
+#import "Post.h"
 
 @interface EditorViewController : ZSSRichTextEditor
+
+@property (nonatomic, strong) Post* post;
 
 @end
