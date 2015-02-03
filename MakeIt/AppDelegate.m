@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"MakeIt" ofType:@"plist"];
+    NSMutableDictionary* infoDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+    
+    NSString* applicationId = [infoDict valueForKey:@"AVOSApplicationId"];
+    NSString* clientKey = [infoDict valueForKey:@"AVOSClientKey"];
+    
+    [AVOSCloud setApplicationId:applicationId clientKey:clientKey];
+    
     return YES;
 }
 

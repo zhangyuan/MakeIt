@@ -7,19 +7,24 @@
 //
 
 #import "EditorViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
+
 
 @implementation EditorViewController
 
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    NSString *html = @"<!-- This is an HTML comment -->"
-    "<p>This is a test of the <strong>ZSSRichTextEditor</strong> by <a title=\"Zed Said\" href=\"http://www.zedsaid.com\">Zed Said Studio</a></p>";
+    NSString *html = @"";
     [self setHTML:html];
 }
 
 - (IBAction)save:(UIBarButtonItem *)sender {
-    NSLog(@"%@", [self getHTML]);
+    AVObject *postObject = [AVObject objectWithClassName:@"Post"];
+    [postObject setObject:[self getHTML] forKey:@"content"];
+    [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) { 
+        
+    }];
 }
 
 @end
