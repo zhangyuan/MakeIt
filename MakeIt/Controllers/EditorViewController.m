@@ -18,4 +18,8 @@
     [self setHTML:html];
 }
 
+- (IBAction)save:(UIBarButtonItem *)sender {
+    NSLog(@"%@", [self getHTML]);
+}
+
 @end
