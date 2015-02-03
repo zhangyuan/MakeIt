@@ -1,10 +1,13 @@
 PODS:
   - AVOSCloud (2.6.10)
+  - ZSSRichTextEditor (0.5.2.1)
 
 DEPENDENCIES:
   - AVOSCloud
+  - ZSSRichTextEditor
 
 SPEC CHECKSUMS:
   AVOSCloud: f6bda519d035a21ceacab049184aa5cdb9e1177f
+  ZSSRichTextEditor: 742425fd433c973ab9145922629487d5623d68c3
 
 COCOAPODS: 0.35.0
