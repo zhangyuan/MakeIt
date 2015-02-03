@@ -10,6 +10,7 @@
 		270166701A80FD4600F209ED /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2701666F1A80FD4600F209ED /* EditorViewController.m */; };
 		270166731A81073700F209ED /* MakeIt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 270166721A81073700F209ED /* MakeIt.plist */; };
 		270166751A810A4700F209ED /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 270166741A810A4700F209ED /* Post.m */; };
+		2701667B1A810FD700F209ED /* PostListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2701667A1A810FD700F209ED /* PostListTableViewController.m */; };
 		277665761A80F7360035D40C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 277665751A80F7360035D40C /* main.m */; };
 		277665791A80F7360035D40C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 277665781A80F7360035D40C /* AppDelegate.m */; };
 		2776657C1A80F7360035D40C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2776657B1A80F7360035D40C /* FirstViewController.m */; };
@@ -37,6 +38,8 @@
 		270166721A81073700F209ED /* MakeIt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MakeIt.plist; sourceTree = "<group>"; };
 		270166741A810A4700F209ED /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Models/Post.m; sourceTree = "<group>"; };
 		270166781A810AA800F209ED /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Models/Post.h; sourceTree = "<group>"; };
+		270166791A810FD700F209ED /* PostListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostListTableViewController.h; path = Controllers/PostListTableViewController.h; sourceTree = "<group>"; };
+		2701667A1A810FD700F209ED /* PostListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostListTableViewController.m; path = Controllers/PostListTableViewController.m; sourceTree = "<group>"; };
 		277665701A80F7360035D40C /* MakeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277665741A80F7360035D40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277665751A80F7360035D40C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 		270166711A80FD4E00F209ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				270166791A810FD700F209ED /* PostListTableViewController.h */,
+				2701667A1A810FD700F209ED /* PostListTableViewController.m */,
 				2701666E1A80FD4600F209ED /* EditorViewController.h */,
 				2701666F1A80FD4600F209ED /* EditorViewController.m */,
 			);
@@ -313,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2701667B1A810FD700F209ED /* PostListTableViewController.m in Sources */,
 				2776657F1A80F7360035D40C /* SecondViewController.m in Sources */,
 				270166751A810A4700F209ED /* Post.m in Sources */,
 				277665791A80F7360035D40C /* AppDelegate.m in Sources */,
