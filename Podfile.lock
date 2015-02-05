@@ -1,13 +1,16 @@
 PODS:
   - AVOSCloud (2.6.10)
+  - CTAssetsPickerController (2.9.0)
   - ZSSRichTextEditor (0.5.2.1)
 
 DEPENDENCIES:
   - AVOSCloud
+  - CTAssetsPickerController (~> 2.9.0)
   - ZSSRichTextEditor
 
 SPEC CHECKSUMS:
   AVOSCloud: f6bda519d035a21ceacab049184aa5cdb9e1177f
+  CTAssetsPickerController: 0613bba18a44c0f8098ca2bc01fdeba7aeb285c4
   ZSSRichTextEditor: 742425fd433c973ab9145922629487d5623d68c3
 
 COCOAPODS: 0.35.0
