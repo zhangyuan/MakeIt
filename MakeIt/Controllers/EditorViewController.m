@@ -14,6 +14,7 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
+    self.enabledToolbarItems = @[ZSSRichTextEditorToolbarBold, ZSSRichTextEditorToolbarTextColor, ZSSRichTextEditorToolbarInsertImage];
     
     NSString *html = @"";
     self.post = [[Post alloc] init];
