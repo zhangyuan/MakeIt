@@ -53,10 +53,23 @@
 
 - (void)assetsPickerController:(CTAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets {
     NSLog(@"%s:%@", __FUNCTION__, assets);
-    [self dismissViewControllerAnimated:YES completion:^{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    for (int i = 0; i < [assets count]; i++) {
+        ALAsset* asset = assets[i];
+        ALAssetRepresentation *rep = [asset defaultRepresentation];
+        Byte *buffer = (Byte*)malloc(rep.size);
+        NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
+        NSData *imageData = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
         
-    }];
-
+        AVFile *imageFile = [AVFile fileWithName:@"PostPhoto.jpg" data:imageData];
+        [imageFile save];
+        
+        NSLog(@"%s:%@", __FUNCTION__,imageFile);
+        
+        AVObject *postPhoto = [AVObject objectWithClassName:@"PostPhoto"];
+        [postPhoto setObject:imageFile forKey:@"imageFile"];
+        [postPhoto save];
+    }
 }
 
 - (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldSelectAsset:(ALAsset *)asset
