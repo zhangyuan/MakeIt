@@ -8,6 +8,7 @@
 
 #import "EditorViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import <CTAssetsPickerController.h>
 
 
 @implementation EditorViewController
@@ -39,6 +40,28 @@
             self.post.objectId = [postObject objectId];
         }
     }];
+}
+
+- (void)showInsertImageDialogWithLink:(NSString *)url alt:(NSString *)alt {
+    [self dismissAlertView];
+    CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+    picker.assetsFilter = [ALAssetsFilter allPhotos];
+    picker.showsNumberOfAssets = NO;
+    picker.delegate = self;
+   [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)assetsPickerController:(CTAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets {
+    NSLog(@"%s:%@", __FUNCTION__, assets);
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+
+}
+
+- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldSelectAsset:(ALAsset *)asset
+{
+    return (picker.selectedAssets.count < 2);
 }
 
 @end
