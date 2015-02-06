@@ -8,7 +8,8 @@
 
 #import "PostListTableViewController.h"
 #import "Post.h"
- #import <AVOSCloud/AVOSCloud.h>
+#import <AVOSCloud/AVOSCloud.h>
+#import "PostDetailViewController.h"
 
 @implementation PostListTableViewController
 
@@ -47,6 +48,7 @@
     }
     
     cell.textLabel.text = post.objectId;
+    cell.detailTextLabel.text = @"";
     
     return cell;
 }
@@ -55,5 +57,12 @@
     return [self.posts count];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showPostDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PostDetailViewController *postDetailViewController = segue.destinationViewController;
+        postDetailViewController.post = [self.posts objectAtIndex:indexPath.row];
+    }
+}
 
 @end
