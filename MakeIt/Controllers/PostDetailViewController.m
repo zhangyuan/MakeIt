@@ -13,9 +13,7 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    NSString *html = [NSString stringWithFormat:@"<html><body><h1>%@</h1></body></html>", self.post.objectId];
-    
-    [self.webView loadHTMLString:html baseURL:nil];
-    
+    NSString* urlString = [NSString stringWithFormat:@"http://makeit.avosapps.com/posts/%@", self.post.objectId];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 @end
