@@ -69,6 +69,8 @@
         AVObject *postPhoto = [AVObject objectWithClassName:@"PostPhoto"];
         [postPhoto setObject:imageFile forKey:@"imageFile"];
         [postPhoto save];
+        
+        [self insertImage:imageFile.url alt:@""];
     }
 }
 
