@@ -17,6 +17,7 @@
     [super viewDidLoad];
 
     AVQuery *query = [AVQuery queryWithClassName:@"Post"];
+    [query orderByDescending:@"createdAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
