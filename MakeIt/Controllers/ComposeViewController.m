@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 NextCloudMedia. All rights reserved.
 //
 
-#import "EditorViewController.h"
+#import "ComposeViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import <CTAssetsPickerController.h>
 
 
-@implementation EditorViewController
+@implementation ComposeViewController
 
 -(void) viewDidLoad {
     [super viewDidLoad];

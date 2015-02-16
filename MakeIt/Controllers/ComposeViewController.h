@@ -10,7 +10,7 @@
 #import "Post.h"
 #import <CTAssetsPickerController.h>
 
-@interface EditorViewController : ZSSRichTextEditor  <CTAssetsPickerControllerDelegate>
+@interface ComposeViewController : ZSSRichTextEditor  <CTAssetsPickerControllerDelegate>
 
 @property (nonatomic, strong) Post* post;
 

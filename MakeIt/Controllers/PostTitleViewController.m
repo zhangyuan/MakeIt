@@ -7,7 +7,7 @@
 //
 
 #import "PostTitleViewController.h"
-#import "EditorViewController.h"
+#import "ComposeViewController.h"
 
 @implementation PostTitleViewController
 
@@ -17,7 +17,7 @@
     }
     if ([segue.identifier isEqualToString:@"composePost"]) {
         self.post.title = self.titleTextField.text;
-        EditorViewController* controller = segue.destinationViewController;
+        ComposeViewController* controller = segue.destinationViewController;
         controller.post = self.post;
     }
 }

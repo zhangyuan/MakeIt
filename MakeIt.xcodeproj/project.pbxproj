@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		270166701A80FD4600F209ED /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2701666F1A80FD4600F209ED /* EditorViewController.m */; };
+		270166701A80FD4600F209ED /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2701666F1A80FD4600F209ED /* ComposeViewController.m */; };
 		270166731A81073700F209ED /* MakeIt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 270166721A81073700F209ED /* MakeIt.plist */; };
 		270166751A810A4700F209ED /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 270166741A810A4700F209ED /* Post.m */; };
 		2701667B1A810FD700F209ED /* PostListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2701667A1A810FD700F209ED /* PostListTableViewController.m */; };
@@ -33,8 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2701666E1A80FD4600F209ED /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorViewController.h; path = Controllers/EditorViewController.h; sourceTree = "<group>"; };
-		2701666F1A80FD4600F209ED /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorViewController.m; path = Controllers/EditorViewController.m; sourceTree = "<group>"; };
+		2701666E1A80FD4600F209ED /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComposeViewController.h; path = Controllers/ComposeViewController.h; sourceTree = "<group>"; };
+		2701666F1A80FD4600F209ED /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComposeViewController.m; path = Controllers/ComposeViewController.m; sourceTree = "<group>"; };
 		270166721A81073700F209ED /* MakeIt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MakeIt.plist; sourceTree = "<group>"; };
 		270166741A810A4700F209ED /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Models/Post.m; sourceTree = "<group>"; };
 		270166781A810AA800F209ED /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Models/Post.h; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 			children = (
 				270166791A810FD700F209ED /* PostListTableViewController.h */,
 				2701667A1A810FD700F209ED /* PostListTableViewController.m */,
-				2701666E1A80FD4600F209ED /* EditorViewController.h */,
-				2701666F1A80FD4600F209ED /* EditorViewController.m */,
+				2701666E1A80FD4600F209ED /* ComposeViewController.h */,
+				2701666F1A80FD4600F209ED /* ComposeViewController.m */,
 				270A3DD31A84F1B600805982 /* PostDetailViewController.h */,
 				270A3DD41A84F1B600805982 /* PostDetailViewController.m */,
 				270A3DD61A91D6EA00805982 /* PostTitleViewController.h */,
@@ -323,7 +323,7 @@
 				277665791A80F7360035D40C /* AppDelegate.m in Sources */,
 				270A3DD51A84F1B600805982 /* PostDetailViewController.m in Sources */,
 				270A3DD81A91D6EA00805982 /* PostTitleViewController.m in Sources */,
-				270166701A80FD4600F209ED /* EditorViewController.m in Sources */,
+				270166701A80FD4600F209ED /* ComposeViewController.m in Sources */,
 				277665761A80F7360035D40C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
