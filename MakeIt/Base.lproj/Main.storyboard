@@ -29,7 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bng-Ml-6Ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2870" y="-385"/>
+            <point key="canvasLocation" x="3682" y="-385"/>
         </scene>
         <!--Compose-->
         <scene sceneID="hNz-n2-bh7">
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3246" y="-312"/>
+            <point key="canvasLocation" x="4058" y="-312"/>
         </scene>
         <!--Post List-->
         <scene sceneID="uZo-mU-UFa">
@@ -98,7 +98,7 @@
                     <navigationItem key="navigationItem" id="V6r-av-gR5">
                         <barButtonItem key="rightBarButtonItem" title="Compose" id="pJP-1M-jgd">
                             <connections>
-                                <segue destination="9pv-A4-QxB" kind="show" id="naV-yA-h3s"/>
+                                <segue destination="IKL-Ds-anV" kind="show" id="txS-H4-KCg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -106,6 +106,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DlT-OR-Zby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2391" y="-328"/>
+        </scene>
+        <!--Set Title View Controller-->
+        <scene sceneID="dKm-OQ-Qtu">
+            <objects>
+                <viewController id="IKL-Ds-anV" userLabel="Set Title View Controller" customClass="PostTitleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="STP-cN-W8Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="BKK-iS-ejC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hUm-E2-Mf7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TItle" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THD-FD-i3b">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="jF9-X2-wvn">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="fVJ-Zx-ZlZ">
+                            <connections>
+                                <segue destination="9pv-A4-QxB" kind="show" identifier="composePost" id="hSD-ov-NeR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextButtonItem" destination="fVJ-Zx-ZlZ" id="AxR-fR-jZa"/>
+                        <outlet property="titleTextField" destination="THD-FD-i3b" id="btG-bE-aMW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vVB-iV-IGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3687" y="477"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -144,5 +180,26 @@
             </objects>
             <point key="canvasLocation" x="1315" y="-328"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="717-En-yH5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kpq-HW-wlZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="faQ-N8-LdH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IKL-Ds-anV" kind="relationship" relationship="rootViewController" id="W8S-yk-RUs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhQ-dJ-6PD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2663" y="-103"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="W8S-yk-RUs"/>
+    </inferredMetricsTieBreakers>
 </document>

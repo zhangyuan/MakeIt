@@ -16,10 +16,7 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     self.enabledToolbarItems = @[ZSSRichTextEditorToolbarBold, ZSSRichTextEditorToolbarTextColor, ZSSRichTextEditorToolbarInsertImage];
-    
     NSString *html = @"";
-    self.post = [[Post alloc] init];
-    
     [self setHTML:html];
 }
 
@@ -35,6 +32,8 @@
     }
     
     [postObject setObject:[self getHTML] forKey:@"content"];
+    [postObject setObject:self.post.title forKey:@"title"];
+    
     [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             self.post.objectId = [postObject objectId];
