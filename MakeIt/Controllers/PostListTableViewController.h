@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PostListTableViewController : UITableViewController
-- (IBAction)refreshPosts:(id)sender;
+- (IBAction)refreshPosts:(UIRefreshControl*)sender;
 @property (nonatomic, strong) NSMutableArray* posts;
 @end

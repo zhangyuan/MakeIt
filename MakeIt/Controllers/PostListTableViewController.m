@@ -15,6 +15,9 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
+    
+    [self.refreshControl beginRefreshing];
+    [self refreshPosts: self.refreshControl];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
