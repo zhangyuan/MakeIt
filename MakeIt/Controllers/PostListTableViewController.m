@@ -31,7 +31,7 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = post.objectId;
+    cell.textLabel.text = post.title;
     cell.detailTextLabel.text = @"";
     
     return cell;
@@ -60,6 +60,7 @@
                 AVObject* object = objects[i];
                 Post* post = [[Post alloc] init];
                 post.objectId = [object objectId];
+                post.title = [object valueForKey:@"title"];
                 
                 [self.posts addObject:post];
             }
