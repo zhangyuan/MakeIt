@@ -15,26 +15,6 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
-
-    AVQuery *query = [AVQuery queryWithClassName:@"Post"];
-    [query orderByDescending:@"createdAt"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            self.posts  = [NSMutableArray arrayWithCapacity:objects.count];
-            for (int i = 0; i < objects.count; i++) {
-                AVObject* object = objects[i];
-                Post* post = [[Post alloc] init];
-                post.objectId = [object objectId];
-                
-                [self.posts addObject:post];
-            }
-            
-            [self.tableView reloadData];
-        } else {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,4 +46,27 @@
     }
 }
 
+- (IBAction)refreshPosts:(UIRefreshControl*)sender {
+    AVQuery *query = [AVQuery queryWithClassName:@"Post"];
+    [query orderByDescending:@"createdAt"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.posts  = [NSMutableArray arrayWithCapacity:objects.count];
+            for (int i = 0; i < objects.count; i++) {
+                AVObject* object = objects[i];
+                Post* post = [[Post alloc] init];
+                post.objectId = [object objectId];
+                
+                [self.posts addObject:post];
+            }
+            
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        
+        [sender endRefreshing];
+    }];
+}
 @end
