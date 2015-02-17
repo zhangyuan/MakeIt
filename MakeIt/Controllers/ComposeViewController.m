@@ -9,6 +9,7 @@
 #import "ComposeViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import <CTAssetsPickerController.h>
+#import "UIImage+ResizeMagick.h"
 
 
 @implementation ComposeViewController
@@ -60,10 +61,12 @@
         NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
         NSData *imageData = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
         
-        AVFile *imageFile = [AVFile fileWithName:@"PostPhoto.jpg" data:imageData];
-        [imageFile save];
+        UIImage* image = [UIImage imageWithData:imageData scale:0.4];
+        UIImage* resizedImage = [image resizedImageByWidth: 320];
         
-        NSLog(@"%s:%@", __FUNCTION__,imageFile);
+        NSData *resizedImageData = UIImagePNGRepresentation(resizedImage);
+        AVFile *imageFile = [AVFile fileWithName:@"PostPhoto.jpg" data:resizedImageData];
+        [imageFile save];
         
         AVObject *postPhoto = [AVObject objectWithClassName:@"PostPhoto"];
         [postPhoto setObject:imageFile forKey:@"imageFile"];
