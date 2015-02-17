@@ -21,14 +21,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="bcG-7W-OJa">
-                        <barButtonItem key="rightBarButtonItem" title="Menu" id="9PI-L6-hqA">
+                        <barButtonItem key="rightBarButtonItem" title="Action" id="9PI-L6-hqA">
                             <connections>
                                 <action selector="menuButtonClicked:" destination="13h-8U-VdG" id="5YW-zs-Mrd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButtonItem" destination="9PI-L6-hqA" id="LZF-Di-feF"/>
+                        <outlet property="actionButtonItem" destination="9PI-L6-hqA" id="XB8-9Y-M5V"/>
                         <outlet property="webView" destination="slK-ml-9kf" id="7Rb-wi-cy7"/>
                     </connections>
                 </viewController>

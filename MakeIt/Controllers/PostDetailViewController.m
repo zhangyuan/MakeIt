@@ -18,6 +18,16 @@
 }
 
 - (IBAction)menuButtonClicked:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Action"
+                                                             delegate:self
+                                                    cancelButtonTitle:nil
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"Edit", @"Copy URL", nil];
+    
+    [actionSheet showInView:self.view];
+}
+
+-(void) copyUrlToClipboard {
     NSString* url = [self.post url];
     UIPasteboard *pb = [UIPasteboard generalPasteboard];
     [pb setString: url];
@@ -25,6 +35,14 @@
     UIAlertView *messageAlert = [[UIAlertView alloc] initWithTitle:@"URL Copied" message: url delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [messageAlert show];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        
+    } else if (buttonIndex == 1) {
+        [self copyUrlToClipboard];
+    }
 }
 
 @end

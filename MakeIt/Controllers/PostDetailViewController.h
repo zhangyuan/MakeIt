@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Post.h"
 
-@interface PostDetailViewController : UIViewController
+@interface PostDetailViewController : UIViewController <UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) Post* post;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *menuButtonItem;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *actionButtonItem;
 
 @end
