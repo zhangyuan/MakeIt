@@ -13,9 +13,18 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    static NSString* server = @"http://dev.makeit.avosapps.com";
-    
-    NSString* urlString = [NSString stringWithFormat:@"%@/posts/%@", server, self.post.objectId];
+    NSString* urlString = [self.post url];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
+
+- (IBAction)menuButtonClicked:(id)sender {
+    NSString* url = [self.post url];
+    UIPasteboard *pb = [UIPasteboard generalPasteboard];
+    [pb setString: url];
+    
+    UIAlertView *messageAlert = [[UIAlertView alloc] initWithTitle:@"URL Copied" message: url delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [messageAlert show];
+}
+
 @end

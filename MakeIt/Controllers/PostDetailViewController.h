@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) Post* post;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *menuButtonItem;
 
 @end

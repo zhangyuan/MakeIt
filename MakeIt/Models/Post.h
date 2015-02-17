@@ -15,6 +15,8 @@
 @property (nonatomic, copy) NSString* title;
 @property (nonatomic, copy) NSString* content;
 
+-(NSString*) url;
+
 @end
 
 #endif
