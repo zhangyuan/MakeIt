@@ -13,7 +13,9 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-    NSString* urlString = [NSString stringWithFormat:@"http://localhost:3000/posts/%@", self.post.objectId];
+    static NSString* server = @"http://dev.makeit.avosapps.com";
+    
+    NSString* urlString = [NSString stringWithFormat:@"%@/posts/%@", server, self.post.objectId];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 @end
