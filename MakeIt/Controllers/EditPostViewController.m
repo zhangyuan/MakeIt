@@ -28,6 +28,8 @@
     [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             self.post.objectId = [postObject objectId];
+            
+            [self.navigationController popToRootViewControllerAnimated:YES];
         }
     }];
 }
