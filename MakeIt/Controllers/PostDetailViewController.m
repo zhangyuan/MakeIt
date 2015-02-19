@@ -20,7 +20,7 @@
 - (IBAction)menuButtonClicked:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Action"
                                                              delegate:self
-                                                    cancelButtonTitle:nil
+                                                    cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:nil
                                                     otherButtonTitles:@"Edit", @"Copy URL", nil];
     
