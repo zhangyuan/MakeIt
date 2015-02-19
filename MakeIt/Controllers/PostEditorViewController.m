@@ -6,41 +6,20 @@
 //  Copyright (c) 2015 NextCloudMedia. All rights reserved.
 //
 
-#import "ComposeViewController.h"
+#import "PostEditorViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import <CTAssetsPickerController.h>
 #import "UIImage+ResizeMagick.h"
 
 
-@implementation ComposeViewController
+@implementation PostEditorViewController
 
 -(void) viewDidLoad {
     [super viewDidLoad];
     self.enabledToolbarItems = @[ZSSRichTextEditorToolbarBold, ZSSRichTextEditorToolbarTextColor, ZSSRichTextEditorToolbarInsertImage];
-    NSString *html = @"";
-    [self setHTML:html];
 }
 
-- (IBAction)save:(UIBarButtonItem *)sender {
-    AVObject* postObject;
-    
-    if (self.post.objectId) {
-        NSLog(@"Save");
-        postObject = [AVObject objectWithoutDataWithClassName:@"Post" objectId:self.post.objectId];
-    } else {
-        NSLog(@"Create");
-        postObject = [AVObject objectWithClassName:@"Post"];
-    }
-    
-    [postObject setObject:[self getHTML] forKey:@"content"];
-    [postObject setObject:self.post.title forKey:@"title"];
-    
-    [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            self.post.objectId = [postObject objectId];
-        }
-    }];
-}
+
 
 - (void)showInsertImageDialogWithLink:(NSString *)url alt:(NSString *)alt {
     [self dismissAlertView];

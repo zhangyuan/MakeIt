@@ -62,6 +62,7 @@
                 Post* post = [[Post alloc] init];
                 post.objectId = [object objectId];
                 post.title = [object valueForKey:@"title"];
+                post.content =[object valueForKey:@"content"];
                 
                 [self.posts addObject:post];
             }

@@ -7,6 +7,7 @@
 //
 
 #import "PostDetailViewController.h"
+#import "EditPostViewController.h"
 
 @implementation PostDetailViewController
 
@@ -39,9 +40,18 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
-        
+        [self performSegueWithIdentifier:@"editPost" sender:self];
     } else if (buttonIndex == 1) {
         [self copyUrlToClipboard];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"editPost"]) {
+        EditPostViewController *destViewController = segue.destinationViewController;
+        NSLog(@"%s:%@", __FUNCTION__, self.post.content);
+        destViewController.post = self.post;
+//        destViewController.hidesBottomBarWhenPushed = YES;
     }
 }
 
