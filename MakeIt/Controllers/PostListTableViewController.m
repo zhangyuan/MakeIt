@@ -44,8 +44,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showPostDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        PostDetailViewController *postDetailViewController = segue.destinationViewController;
-        postDetailViewController.post = [self.posts objectAtIndex:indexPath.row];
+        PostDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.post = [self.posts objectAtIndex:indexPath.row];
+        destViewController.hidesBottomBarWhenPushed = YES;
     }
 }
 
