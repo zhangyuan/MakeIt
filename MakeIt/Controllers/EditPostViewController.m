@@ -7,6 +7,7 @@
 //
 
 #import "EditPostViewController.h"
+#import "PostDetailViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 
 @implementation EditPostViewController
@@ -28,10 +29,13 @@
     [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             self.post.objectId = [postObject objectId];
+            PostDetailViewController* controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PostDetailViewController"];
+            controller.post = self.post;
             
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            UINavigationController* navigationController = self.navigationController;
+            [navigationController popToRootViewControllerAnimated:NO];
+            [navigationController pushViewController:controller animated:YES];
         }
     }];
 }
-
 @end

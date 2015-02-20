@@ -8,6 +8,7 @@
 
 #import <AVOSCloud/AVOSCloud.h>
 #import "CreatePostViewController.h"
+#import "PostDetailViewController.h"
 
 @implementation CreatePostViewController
 
@@ -35,7 +36,13 @@
     [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             self.post.objectId = [postObject objectId];
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            
+            PostDetailViewController* controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PostDetailViewController"];
+            controller.post = self.post;
+            
+            UINavigationController* navigationController = self.navigationController;
+            [navigationController popToRootViewControllerAnimated:NO];
+            [navigationController pushViewController:controller animated:YES];
         }
     }];
 }

@@ -7,7 +7,7 @@
         <!--Show Controller-->
         <scene sceneID="zLl-8Q-07h">
             <objects>
-                <viewController id="13h-8U-VdG" userLabel="Show Controller" customClass="PostDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailViewController" id="13h-8U-VdG" userLabel="Show Controller" customClass="PostDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3SQ-4B-Mqz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
