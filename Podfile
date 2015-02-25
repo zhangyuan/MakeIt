@@ -5,3 +5,4 @@ pod 'AVOSCloud'
 pod 'ZSSRichTextEditor'
 pod 'CTAssetsPickerController',  '~> 2.9.0'
 pod "UIImage-ResizeMagick"
+pod 'MBProgressHUD', '~> 0.8'
