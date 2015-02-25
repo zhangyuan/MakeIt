@@ -22,7 +22,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     Post* post = [self.posts objectAtIndex:indexPath.row];
-    
+
     static NSString *simpleTableIdentifier = @"PostListTableCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -30,7 +30,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
     }
-    
+
     cell.textLabel.text = post.title;
     cell.detailTextLabel.text = @"";
     
