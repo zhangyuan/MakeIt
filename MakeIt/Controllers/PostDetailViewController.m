@@ -8,6 +8,7 @@
 
 #import "PostDetailViewController.h"
 #import "EditPostViewController.h"
+#import "WXApi.h"
 
 @implementation PostDetailViewController
 
@@ -23,7 +24,7 @@
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Edit", @"Copy URL", nil];
+                                                    otherButtonTitles:@"Edit", @"Copy URL", @"Forward to WeChat Friends", @"Forward to WeChat Moments", nil];
     
     [actionSheet showInView:self.view];
 }
@@ -38,11 +39,40 @@
     [messageAlert show];
 }
 
+-(void) forwardToWechatFriends {
+    [self forwardToWeChat:WXSceneSession];
+}
+
+-(void) forwardToWechatMoments {
+    [self forwardToWeChat:WXSceneTimeline];
+}
+
+-(void) forwardToWeChat:(int) scene {
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = self.post.title;
+
+    WXWebpageObject *ext = [WXWebpageObject object];
+    ext.webpageUrl = self.post.url;
+    
+    message.mediaObject = ext;
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = scene;
+    
+    [WXApi sendReq:req];
+}
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
         [self performSegueWithIdentifier:@"editPost" sender:self];
     } else if (buttonIndex == 1) {
         [self copyUrlToClipboard];
+    } else if (buttonIndex == 2) {
+        [self forwardToWechatFriends];
+    } else if (buttonIndex == 3) {
+        [self forwardToWechatMoments];
     }
 }
 

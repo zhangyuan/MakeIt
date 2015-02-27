@@ -6,5 +6,7 @@
 	<string></string>
 	<key>AVOSClientKey</key>
 	<string></string>
+	<key>WeChatAppID</key>
+	<string></string>
 </dict>
 </plist>
