@@ -30,6 +30,12 @@
 #define COCOAPODS_VERSION_MINOR_UIImage_ResizeMagick 0
 #define COCOAPODS_VERSION_PATCH_UIImage_ResizeMagick 1
 
+// WeChatSDK
+#define COCOAPODS_POD_AVAILABLE_WeChatSDK
+#define COCOAPODS_VERSION_MAJOR_WeChatSDK 1
+#define COCOAPODS_VERSION_MINOR_WeChatSDK 5
+#define COCOAPODS_VERSION_PATCH_WeChatSDK 0
+
 // ZSSRichTextEditor
 #define COCOAPODS_POD_AVAILABLE_ZSSRichTextEditor
 // This library does not follow semantic-versioning,

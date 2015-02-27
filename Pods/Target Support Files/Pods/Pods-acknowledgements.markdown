@@ -90,6 +90,11 @@ in your own software. Thanks.
  ***********************************************************************************/
 
 
+## WeChatSDK
+
+Copyright (c) 1998 - 2015 Tencent All Right Reserved.
+
+
 ## ZSSRichTextEditor
 
 The MIT License (MIT)

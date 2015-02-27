@@ -119,6 +119,15 @@ in your own software. Thanks.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright (c) 1998 - 2015 Tencent All Right Reserved.
+</string>
+			<key>Title</key>
+			<string>WeChatSDK</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2014 Zed Said Studio
