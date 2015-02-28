@@ -46,8 +46,10 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         PostDetailViewController *destViewController = segue.destinationViewController;
         destViewController.post = [self.posts objectAtIndex:indexPath.row];
-        destViewController.hidesBottomBarWhenPushed = YES;
     }
+    
+    UIViewController* controller = segue.destinationViewController;
+    controller.hidesBottomBarWhenPushed = YES;
 }
 
 - (IBAction)refreshPosts:(UIRefreshControl*)sender {
