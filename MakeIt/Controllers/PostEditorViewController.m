@@ -42,10 +42,21 @@
         NSUInteger buffered = [rep getBytes:buffer fromOffset:0.0 length:rep.size error:nil];
         NSData *imageData = [NSData dataWithBytesNoCopy:buffer length:buffered freeWhenDone:YES];
 
-        UIImage* image = [UIImage imageWithData:imageData scale:0.6];
-        UIImage*targetImage = [image resizedImageByWidth: 320];
+        NSLog(@"imageData = %ld", imageData.length);
+        
+        NSData *targetImageData;
+        
+        //300 KB
+        if (imageData.length < 300 * 1024) {
+            targetImageData = imageData;
+        } else {
+            UIImage* image = [UIImage imageWithData:imageData scale: (300 * 1024) / imageData.length];
+            UIImage* targetImage = [image resizedImageByWidth: 320];
+            targetImageData = UIImagePNGRepresentation(targetImage);
+        }
+        
+        NSLog(@"targetImageData = %ld", targetImageData.length);
 
-        NSData *targetImageData = UIImagePNGRepresentation(targetImage);
         AVFile *imageFile = [AVFile fileWithName:@"PostPhoto.jpg" data:targetImageData];
 
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
