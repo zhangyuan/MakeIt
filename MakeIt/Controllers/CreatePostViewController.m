@@ -36,6 +36,7 @@
     [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             self.post.objectId = [postObject objectId];
+            self.post.content = [postObject valueForKey:@"content"];
             
             PostDetailViewController* controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PostDetailViewController"];
             controller.post = self.post;
