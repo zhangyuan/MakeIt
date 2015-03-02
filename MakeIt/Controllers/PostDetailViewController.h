@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) Post* post;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *actionButtonItem;
+- (IBAction)swipe:(id)sender;
 
 @end

@@ -19,6 +19,10 @@
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KYr-OM-pjZ" appends="YES" id="Cmf-oe-S3b"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="bcG-7W-OJa">
                         <barButtonItem key="rightBarButtonItem" title="Action" id="9PI-L6-hqA">
@@ -34,6 +38,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bng-Ml-6Ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="KYr-OM-pjZ">
+                    <connections>
+                        <action selector="swipe:" destination="13h-8U-VdG" id="UDh-kj-TqF"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1780" y="-403"/>
         </scene>

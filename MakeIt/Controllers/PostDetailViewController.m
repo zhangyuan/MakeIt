@@ -85,4 +85,7 @@
     }
 }
 
+- (IBAction)swipe:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
