@@ -19,4 +19,8 @@
     return nil;
 }
 
+-(void) deleteInBackground {
+    [self.avObject deleteInBackground];
+}
+
 @end

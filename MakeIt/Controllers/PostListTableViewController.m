@@ -72,6 +72,16 @@
     [self performSegueWithIdentifier:@"showPostDetail" sender:self];
 }
 
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
+    NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
+    Post* post = self.posts[indexPath.row];
+    [post deleteInBackground];
+    [self.posts removeObject:post];
+    
+    NSArray* indexPaths = [NSArray arrayWithObjects:indexPath, nil];
+    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+}
+
 - (IBAction)refreshPosts:(UIRefreshControl*)sender {
     AVQuery *query = [AVQuery queryWithClassName:@"Post"];
     [query orderByDescending:@"createdAt"];
@@ -82,6 +92,7 @@
             for (int i = 0; i < objects.count; i++) {
                 AVObject* object = objects[i];
                 Post* post = [[Post alloc] init];
+                post.avObject = object;
                 post.objectId = [object objectId];
                 post.title = [object valueForKey:@"title"];
                 post.content =[object valueForKey:@"content"];
