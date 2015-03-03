@@ -2,6 +2,7 @@ PODS:
   - AVOSCloud (2.6.10)
   - CTAssetsPickerController (2.9.0)
   - MBProgressHUD (0.9)
+  - SWTableViewCell (0.3.7)
   - UIImage-ResizeMagick (0.0.1)
   - WeChatSDK (1.5)
   - ZSSRichTextEditor (0.5.2.1)
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - AVOSCloud
   - CTAssetsPickerController (~> 2.9.0)
   - MBProgressHUD (~> 0.8)
+  - SWTableViewCell (~> 0.3.7)
   - UIImage-ResizeMagick
   - WeChatSDK (= 1.5)
   - ZSSRichTextEditor
@@ -18,6 +20,7 @@ SPEC CHECKSUMS:
   AVOSCloud: f6bda519d035a21ceacab049184aa5cdb9e1177f
   CTAssetsPickerController: 0613bba18a44c0f8098ca2bc01fdeba7aeb285c4
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  SWTableViewCell: 25de71898e3fcd11cf75707ef90245acf990ec03
   UIImage-ResizeMagick: 6edd4b95aabf4be264bf99147aa27abb319f3c7f
   WeChatSDK: 16f2b42a84b91b82c55096da73d16d0020ed251c
   ZSSRichTextEditor: 742425fd433c973ab9145922629487d5623d68c3

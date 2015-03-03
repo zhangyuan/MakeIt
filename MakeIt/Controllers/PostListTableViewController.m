@@ -10,6 +10,11 @@
 #import "Post.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "PostDetailViewController.h"
+#import "SWTableViewCell.h"
+#import "NSMutableArray+SWUtilityButtons.h"
+
+@interface PostListTableViewController() <SWTableViewCellDelegate>
+@end
 
 @implementation PostListTableViewController
 
@@ -21,20 +26,31 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Post* post = [self.posts objectAtIndex:indexPath.row];
+    static NSString *cellIdentifier = @"PostListTableCell";
 
-    static NSString *simpleTableIdentifier = @"PostListTableCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    SWTableViewCell *cell = (SWTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
+        cell = [[SWTableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        cell.rightUtilityButtons = [self rightButtons];
+
+        cell.delegate = self;
     }
 
+    Post* post = [self.posts objectAtIndex:indexPath.row];
     cell.textLabel.text = post.title;
     cell.detailTextLabel.text = @"";
     
     return cell;
+}
+
+-(NSArray*) rightButtons {
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                title:@"Delete"];
+    
+    return rightUtilityButtons;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
