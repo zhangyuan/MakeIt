@@ -68,6 +68,10 @@
     controller.hidesBottomBarWhenPushed = YES;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showPostDetail" sender:self];
+}
+
 - (IBAction)refreshPosts:(UIRefreshControl*)sender {
     AVQuery *query = [AVQuery queryWithClassName:@"Post"];
     [query orderByDescending:@"createdAt"];
