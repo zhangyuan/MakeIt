@@ -21,6 +21,7 @@
 		277665841A80F7360035D40C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277665831A80F7360035D40C /* Images.xcassets */; };
 		277665871A80F7360035D40C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277665851A80F7360035D40C /* LaunchScreen.xib */; };
 		277665931A80F7360035D40C /* MakeItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277665921A80F7360035D40C /* MakeItTests.m */; };
+		27971ADB1AA61F0200C99FC5 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 27971ADA1AA61F0200C99FC5 /* delete.png */; };
 		CC096C43AB0D86F120ABD9A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6EAAEA6DB629F5EC169A06 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		2776658C1A80F7360035D40C /* MakeItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277665911A80F7360035D40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277665921A80F7360035D40C /* MakeItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeItTests.m; sourceTree = "<group>"; };
+		27971ADA1AA61F0200C99FC5 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		3AA6CF6BFED79BD08CB51F79 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8CBEEB127C2C939EAA9894FD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8F6EAAEA6DB629F5EC169A06 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 		277665721A80F7360035D40C /* MakeIt */ = {
 			isa = PBXGroup;
 			children = (
+				27971AD91AA61F0200C99FC5 /* Resources */,
 				277665771A80F7360035D40C /* AppDelegate.h */,
 				277665781A80F7360035D40C /* AppDelegate.m */,
 				277665801A80F7360035D40C /* Main.storyboard */,
@@ -182,6 +185,14 @@
 				277665911A80F7360035D40C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27971AD91AA61F0200C99FC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27971ADA1AA61F0200C99FC5 /* delete.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9C9CDBA041ACC776651F5499 /* Frameworks */ = {
@@ -277,6 +288,7 @@
 				277665821A80F7360035D40C /* Main.storyboard in Resources */,
 				270166731A81073700F209ED /* MakeIt.plist in Resources */,
 				277665871A80F7360035D40C /* LaunchScreen.xib in Resources */,
+				27971ADB1AA61F0200C99FC5 /* delete.png in Resources */,
 				277665841A80F7360035D40C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
