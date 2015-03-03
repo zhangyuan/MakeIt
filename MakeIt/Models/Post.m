@@ -13,7 +13,7 @@
 
 -(NSString*) url {
     if (self.objectId) {
-        static NSString* server = @"http://dev.makeit.avosapps.com";
+        static NSString* server = @"http://makeit.avosapps.com";
         return [NSString stringWithFormat:@"%@/posts/%@", server, self.objectId];
     }
     return nil;
