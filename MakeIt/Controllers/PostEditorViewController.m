@@ -17,7 +17,6 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
-    self.formatHTML = NO;
     self.enabledToolbarItems = @[ZSSRichTextEditorToolbarBold, ZSSRichTextEditorToolbarTextColor, ZSSRichTextEditorToolbarInsertImage];
 }
 
