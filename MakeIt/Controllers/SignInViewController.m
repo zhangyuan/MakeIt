@@ -25,6 +25,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];    
+    return YES;
+}
+
 - (IBAction)signIN:(id)sender {
     NSString* username = self.usernameTextField.text;
     NSString* password = self.passwordTextField.text;
