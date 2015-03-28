@@ -64,6 +64,7 @@
         [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             AVObject *postPhoto = [AVObject objectWithClassName:@"PostPhoto"];
             [postPhoto setObject:imageFile forKey:@"imageFile"];
+            [postPhoto setObject:[AVUser currentUser] forKey:@"user"];
             [postPhoto save];
 
             [self insertImage:imageFile.url alt:@""];

@@ -32,6 +32,7 @@
     
     [postObject setObject:[self getHTML] forKey:@"content"];
     [postObject setObject:self.post.title forKey:@"title"];
+    [postObject setObject:[AVUser currentUser] forKey:@"user"];
     
     [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
