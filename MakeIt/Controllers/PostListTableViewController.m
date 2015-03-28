@@ -84,6 +84,7 @@
 
 - (IBAction)refreshPosts:(UIRefreshControl*)sender {
     AVQuery *query = [AVQuery queryWithClassName:@"Post"];
+    [query whereKey:@"user" equalTo:[AVUser currentUser]];
     [query orderByDescending:@"createdAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
