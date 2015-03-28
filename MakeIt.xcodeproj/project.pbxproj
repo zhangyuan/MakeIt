@@ -21,6 +21,8 @@
 		277665841A80F7360035D40C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277665831A80F7360035D40C /* Images.xcassets */; };
 		277665871A80F7360035D40C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277665851A80F7360035D40C /* LaunchScreen.xib */; };
 		277665931A80F7360035D40C /* MakeItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277665921A80F7360035D40C /* MakeItTests.m */; };
+		277CA67F1AC6C5C8006BCCF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277CA67D1AC6C5C8006BCCF2 /* SignIn.storyboard */; };
+		277CA6821AC6C7CB006BCCF2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277CA6811AC6C7CB006BCCF2 /* RegisterViewController.m */; };
 		27971ADB1AA61F0200C99FC5 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 27971ADA1AA61F0200C99FC5 /* delete.png */; };
 		CC096C43AB0D86F120ABD9A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6EAAEA6DB629F5EC169A06 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,9 @@
 		2776658C1A80F7360035D40C /* MakeItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277665911A80F7360035D40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277665921A80F7360035D40C /* MakeItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeItTests.m; sourceTree = "<group>"; };
+		277CA67E1AC6C5C8006BCCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
+		277CA6801AC6C7CB006BCCF2 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Controllers/RegisterViewController.h; sourceTree = "<group>"; };
+		277CA6811AC6C7CB006BCCF2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Controllers/RegisterViewController.m; sourceTree = "<group>"; };
 		27971ADA1AA61F0200C99FC5 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		3AA6CF6BFED79BD08CB51F79 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8CBEEB127C2C939EAA9894FD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +116,8 @@
 				270A3DD71A91D6EA00805982 /* PostTitleViewController.m */,
 				273AD1021A95DD5000D16004 /* EditPostViewController.h */,
 				273AD1031A95DD5000D16004 /* EditPostViewController.m */,
+				277CA6801AC6C7CB006BCCF2 /* RegisterViewController.h */,
+				277CA6811AC6C7CB006BCCF2 /* RegisterViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 				277665771A80F7360035D40C /* AppDelegate.h */,
 				277665781A80F7360035D40C /* AppDelegate.m */,
 				277665801A80F7360035D40C /* Main.storyboard */,
+				277CA67D1AC6C5C8006BCCF2 /* SignIn.storyboard */,
 				270166761A810A7100F209ED /* Models */,
 				270166711A80FD4E00F209ED /* Controllers */,
 				277665831A80F7360035D40C /* Images.xcassets */,
@@ -289,6 +297,7 @@
 				270166731A81073700F209ED /* MakeIt.plist in Resources */,
 				277665871A80F7360035D40C /* LaunchScreen.xib in Resources */,
 				27971ADB1AA61F0200C99FC5 /* delete.png in Resources */,
+				277CA67F1AC6C5C8006BCCF2 /* SignIn.storyboard in Resources */,
 				277665841A80F7360035D40C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +354,7 @@
 				277665791A80F7360035D40C /* AppDelegate.m in Sources */,
 				273AD1041A95DD5000D16004 /* EditPostViewController.m in Sources */,
 				270A3DD51A84F1B600805982 /* PostDetailViewController.m in Sources */,
+				277CA6821AC6C7CB006BCCF2 /* RegisterViewController.m in Sources */,
 				270A3DD81A91D6EA00805982 /* PostTitleViewController.m in Sources */,
 				270166701A80FD4600F209ED /* PostEditorViewController.m in Sources */,
 				273AD1011A95D97000D16004 /* CreatePostViewController.m in Sources */,
@@ -385,6 +395,14 @@
 				277665861A80F7360035D40C /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		277CA67D1AC6C5C8006BCCF2 /* SignIn.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				277CA67E1AC6C5C8006BCCF2 /* Base */,
+			);
+			name = SignIn.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

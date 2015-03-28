@@ -30,6 +30,10 @@
     NSString* wechatAppId = [infoDict valueForKey:@"WeChatAppID"];
     [WXApi registerApp:wechatAppId];
     
+    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"SignIn" bundle:nil];
+    
+    self.window.rootViewController = [storyBoard instantiateInitialViewController];;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
