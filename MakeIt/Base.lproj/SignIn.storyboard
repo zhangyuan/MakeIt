@@ -7,7 +7,7 @@
         <!--Make It-->
         <scene sceneID="rik-dV-SXo">
             <objects>
-                <viewController id="SXo-Tf-C4N" sceneMemberID="viewController">
+                <viewController id="SXo-Tf-C4N" customClass="SignInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F2q-Xa-d65"/>
                         <viewControllerLayoutGuide type="bottom" id="Fxc-Zd-bku"/>
@@ -31,6 +31,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signIN:" destination="SXo-Tf-C4N" eventType="touchUpInside" id="5Dn-ic-8hF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzH-Zm-MGR">
                                 <rect key="frame" x="180" y="314" width="57" height="30"/>
@@ -54,6 +57,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Make It" id="Ig1-hN-GRx"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="joQ-hA-Vr1" id="HTg-xf-Zr1"/>
+                        <outlet property="usernameTextField" destination="wv8-se-9IV" id="tBn-Wy-FwH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2H-q1-mh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
