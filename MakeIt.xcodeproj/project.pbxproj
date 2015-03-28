@@ -24,6 +24,7 @@
 		277CA67F1AC6C5C8006BCCF2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277CA67D1AC6C5C8006BCCF2 /* SignIn.storyboard */; };
 		277CA6821AC6C7CB006BCCF2 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277CA6811AC6C7CB006BCCF2 /* RegisterViewController.m */; };
 		277CA6851AC6CB15006BCCF2 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277CA6841AC6CB15006BCCF2 /* SignInViewController.m */; };
+		277CA6881AC6CCD9006BCCF2 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277CA6871AC6CCD9006BCCF2 /* SettingsTableViewController.m */; };
 		27971ADB1AA61F0200C99FC5 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 27971ADA1AA61F0200C99FC5 /* delete.png */; };
 		CC096C43AB0D86F120ABD9A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6EAAEA6DB629F5EC169A06 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,8 @@
 		277CA6811AC6C7CB006BCCF2 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Controllers/RegisterViewController.m; sourceTree = "<group>"; };
 		277CA6831AC6CB15006BCCF2 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = Controllers/SignInViewController.h; sourceTree = "<group>"; };
 		277CA6841AC6CB15006BCCF2 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = Controllers/SignInViewController.m; sourceTree = "<group>"; };
+		277CA6861AC6CCD8006BCCF2 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsTableViewController.h; path = Controllers/SettingsTableViewController.h; sourceTree = "<group>"; };
+		277CA6871AC6CCD9006BCCF2 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsTableViewController.m; path = Controllers/SettingsTableViewController.m; sourceTree = "<group>"; };
 		27971ADA1AA61F0200C99FC5 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		3AA6CF6BFED79BD08CB51F79 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8CBEEB127C2C939EAA9894FD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				277CA6811AC6C7CB006BCCF2 /* RegisterViewController.m */,
 				277CA6831AC6CB15006BCCF2 /* SignInViewController.h */,
 				277CA6841AC6CB15006BCCF2 /* SignInViewController.m */,
+				277CA6861AC6CCD8006BCCF2 /* SettingsTableViewController.h */,
+				277CA6871AC6CCD9006BCCF2 /* SettingsTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277CA6881AC6CCD9006BCCF2 /* SettingsTableViewController.m in Sources */,
 				2701667B1A810FD700F209ED /* PostListTableViewController.m in Sources */,
 				270166751A810A4700F209ED /* Post.m in Sources */,
 				277665791A80F7360035D40C /* AppDelegate.m in Sources */,
