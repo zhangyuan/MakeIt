@@ -3,6 +3,7 @@ PODS:
   - CTAssetsPickerController (2.9.0)
   - MBProgressHUD (0.9)
   - SWTableViewCell (0.3.7)
+  - Toast (2.4)
   - UIImage-ResizeMagick (0.0.1)
   - WeChatSDK (1.5)
   - ZSSRichTextEditor (0.5.2.1)
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - CTAssetsPickerController (~> 2.9.0)
   - MBProgressHUD (~> 0.8)
   - SWTableViewCell (~> 0.3.7)
+  - Toast (~> 2.4)
   - UIImage-ResizeMagick
   - WeChatSDK (= 1.5)
   - ZSSRichTextEditor
@@ -21,6 +23,7 @@ SPEC CHECKSUMS:
   CTAssetsPickerController: 0613bba18a44c0f8098ca2bc01fdeba7aeb285c4
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   SWTableViewCell: 25de71898e3fcd11cf75707ef90245acf990ec03
+  Toast: 6a3c2b1d70e426b26d130971c369670eac7aa9ce
   UIImage-ResizeMagick: 6edd4b95aabf4be264bf99147aa27abb319f3c7f
   WeChatSDK: 16f2b42a84b91b82c55096da73d16d0020ed251c
   ZSSRichTextEditor: 742425fd433c973ab9145922629487d5623d68c3

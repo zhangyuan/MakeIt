@@ -8,6 +8,7 @@
 
 #import "SignInViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import <Toast/UIView+Toast.h>
 
 @interface SignInViewController ()
 
@@ -40,7 +41,7 @@
             vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
             [self presentViewController:vc animated:YES completion:NULL];
         } else {
-            
+            [self.view makeToast: error.localizedDescription];
         }
     }];
 }

@@ -8,6 +8,7 @@
 
 #import "RegisterViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import <Toast/UIView+Toast.h>
 
 @interface RegisterViewController ()
 
@@ -36,9 +37,9 @@
 */
 - (IBAction)register:(id)sender {
     if(self.emailTextField.text.length == 0
-       && self.passwordTextField.text.length == 0
-       && self.passwordConfirmationTextField.text.length == 0
-       && self.usernameTextField.text.length == 0){
+       || self.passwordTextField.text.length == 0
+       || self.passwordConfirmationTextField.text.length == 0
+       || self.usernameTextField.text.length == 0){
         return;
     }
     
@@ -58,7 +59,7 @@
             vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
             [self presentViewController:vc animated:YES completion:NULL];
         } else {
-            
+            [self.view makeToast: error.localizedDescription];
         }
     }];
 }

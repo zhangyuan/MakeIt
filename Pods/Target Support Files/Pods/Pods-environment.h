@@ -30,6 +30,12 @@
 #define COCOAPODS_VERSION_MINOR_SWTableViewCell 3
 #define COCOAPODS_VERSION_PATCH_SWTableViewCell 7
 
+// Toast
+#define COCOAPODS_POD_AVAILABLE_Toast
+#define COCOAPODS_VERSION_MAJOR_Toast 2
+#define COCOAPODS_VERSION_MINOR_Toast 4
+#define COCOAPODS_VERSION_PATCH_Toast 0
+
 // UIImage-ResizeMagick
 #define COCOAPODS_POD_AVAILABLE_UIImage_ResizeMagick
 #define COCOAPODS_VERSION_MAJOR_UIImage_ResizeMagick 0
